@@ -1,0 +1,38 @@
+## yaml 可以给实体类赋值
+#server:
+#  port: 8080
+#student: {name: liushun,age: 19,sex: man}
+#
+#student1:
+#  name: zhangsan
+#  age: 12
+#
+#arr: [1,2,3,45,6]
+#
+#arr2:
+#  - asan
+#  - lisi
+#  - wangwu
+#
+## 注入的时候属性名要一致
+#dog:
+#  name: 旺财
+#  age:
+spring:
+#  messages:
+#    basename: i18n.login
+#  mvc:
+#    format:
+#      date: dd/MM/yyyy
+
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/mybatis?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.ls.db.pojo
+  mapper-locations: classpath:mybatis/mapper/*.xml
